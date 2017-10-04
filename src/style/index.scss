@@ -1,20 +1,48 @@
 html, body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  @media all and (max-width: 759px){
+    -webkit-overflow-scrolling : touch !important;
+  }
+}
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
 }
 
-* {
-	box-sizing: border-box;
+body {
+  margin:0;
+  padding:0;
+  background: #fafafa;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  color: rgba(23,42,58,.8);
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  @media all and (min-width: 760px){
+    overflow: auto;
+    height: auto;
+  }
 }
 
-#app {
-	height: 100%;
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.clearfix:after,.clearfix:before {
+    content: " ";
+    display: table
+}
+a, a:focus, a:visited {
+  text-decoration: none;
+  color: rgba(23,42,58,.9);
+  cursor: pointer;
 }

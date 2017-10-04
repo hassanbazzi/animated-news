@@ -1,4 +1,12 @@
-import './style';
-import App from './components/app';
+import { Provider } from 'mobx-preact'
 
-export default App;
+import App from './components/app'
+import store from 'store'
+
+import './style'
+
+export default () => (
+  <Provider {...store}>
+    <App />
+  </Provider>
+)

@@ -1,31 +1,28 @@
-import { h, Component } from 'preact';
-import { Router } from 'preact-router';
+import { Component } from 'preact'
+import { Router } from 'preact-router'
+import createBrowserHistory from 'history/createBrowserHistory'
+import { syncHistoryWithStore } from 'mobx-react-router'
+import stores from 'store'
 
-import Header from './header';
-import Home from '../routes/home';
-import Profile from '../routes/profile';
-// import Home from 'async!./home';
-// import Profile from 'async!./profile';
+import Stories from 'routes/stories'
+import Header from 'components/Header'
+import StoryViewer from 'components/StoryViewer'
+
+const browserHistory = createBrowserHistory()
+
+const history = syncHistoryWithStore(browserHistory, stores.routing)
 
 export default class App extends Component {
-	/** Gets fired when the route changes.
-	 *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
-	 *	@param {string} event.url	The newly routed URL
-	 */
-	handleRoute = e => {
-		this.currentUrl = e.url;
-	};
-
-	render() {
-		return (
-			<div id="app">
-				<Header />
-				<Router onChange={this.handleRoute}>
-					<Home path="/" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
-				</Router>
-			</div>
-		);
-	}
+  render () {
+    return (
+      <div id='app'>
+        <Header />
+        <Router history={history}>
+          <Stories path='/' />
+          <Stories path='/story/:shortUrl' />
+        </Router>
+        <StoryViewer />
+      </div>
+    )
+  }
 }
