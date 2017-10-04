@@ -1,0 +1,21 @@
+.container {
+  width: 100%;  
+}
+.title {
+  margin: 0;
+}
+.content {
+  font-size: .9rem;
+}
+.date {
+  font-size: .6rem;
+  margin-top: 0;
+}
+.close {
+  @media all and (max-width: 599px) {
+    display: none;
+  }
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

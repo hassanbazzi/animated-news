@@ -1,0 +1,35 @@
+.container {
+  background: rgba(255,255,255, 1);
+  transition: all .3s ease-in-out;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: calc( 100% - 50px );
+  transform: translateX(100%);
+  opacity: 0;
+  will-change: transform, opacity;
+  padding: 1rem;
+  @media all and (min-width: 600px) {
+    transform: scale(0);
+    background: rgba(0,0,0, 0.8);
+    > div {
+      background: #fff;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+      transform: translateY( calc( -50px - 50% ) );
+      top: 50%;
+      position: relative;
+    }
+  }
+}
+
+.active {
+  transform: translateX(0);
+  opacity: 1;
+  @media all and (min-width: 600px) {
+    transform: scale(1);
+  }
+}

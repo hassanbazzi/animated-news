@@ -1,0 +1,53 @@
+{
+  "dependencies": {
+    "firebase": "4.4.0",
+    "history": "^4.7.2",
+    "mobx": "^3.3.0",
+    "mobx-preact": "^0.3.1",
+    "mobx-react-router": "^4.0.1",
+    "obj-str": "^1.0.0",
+    "preact": "8.2.5",
+    "preact-compat": "3.17.0",
+    "preact-markup": "^1.6.0",
+    "preact-router": "2.5.7",
+    "promise-polyfill": "^6.0.2",
+    "react-icons": "^2.2.5",
+    "timeago.js": "^3.0.2",
+    "window-or-global": "1.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "eslint": "3.19.0",
+    "eslint-plugin-react": "7.3.0",
+    "mocha": "3.5.0",
+    "mocha-standard": "1.0.0",
+    "node-sass": "4.5.3",
+    "preact-cli": "1.4.1",
+    "sass-loader": "6.0.5",
+    "standard": "10.0.3"
+  },
+  "standard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "context",
+      "describe",
+      "it",
+      "h"
+    ],
+    "ignore": [
+      "build/"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+      "react"
+    ],
+    "settings": {
+      "react": {
+        "pragma": "h"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  padding: 1rem;
+  &:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    background: #11998e;  /* fallback for old browsers */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    height: 1px;
+  } 
+}
+.title {
+  margin: 0;
+}
+.content {
+  font-size: .9rem;
+}
+.date {
+  font-size: .6rem;
+}
